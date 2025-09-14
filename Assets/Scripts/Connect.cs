@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -8,6 +9,9 @@ public class Connect : MonoBehaviour
     public string serverUrl = "http://localhost:3000";
     public string gameId;
     public string playerName;
+
+    [Header("UI")]
+    public TMP_InputField joinGameInputfield;
 
     private void Awake()
     {
@@ -21,6 +25,7 @@ public class Connect : MonoBehaviour
 
     public void JoinGameRoutine()
     {
+        gameId = joinGameInputfield.text;
         StartCoroutine(JoinGame(gameId, playerName));
     }
 
