@@ -7,7 +7,7 @@ public class Connect : MonoBehaviour
 {
     public BoardLoader boardLoader;
     public string serverUrl = "http://localhost:3000";
-    public string gameId;
+    private string gameId;
     public string playerName;
 
     [Header("UI")]
